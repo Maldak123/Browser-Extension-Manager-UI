@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@font-face {
+	font-family: "Noto Sans";
+	src: url("../assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf")
+		format("truetype");
+}
+
+@layer theme {
+	body {
+		font-family: "Noto Sans", serif;
+	}
+	p {
+		font-size: 16px;
+	}
+}
+@property --tw-border-style {
+	syntax: "*";
+	inherits: false;
+	initial-value: solid;
+}
+@layer utilities {
+	.active-btn {
+		background-color: hsl(3, 86%, 64%);
+		color: hsl(227, 75%, 14%);
+		font-weight: 500;
+		border-radius: calc(infinity * 1px);
+		padding: calc(var(--spacing) * 2);
+		padding-inline: calc(var(--spacing) * 5);
+		cursor: pointer;
+	}
+	.inactive-btn {
+		background-color: hsl(226, 11%, 37%, 75%);
+		color: hsl(217, 61%, 90%);
+		border-color: hsl(226, 11%, 37%);
+		font-weight: 500;
+		border-radius: calc(infinity * 1px);
+		padding: calc(var(--spacing) * 2);
+		padding-inline: calc(var(--spacing) * 5);
+		border-style: var(--tw-border-style);
+		border-width: 1px;
+		cursor: pointer;
+	}
+}
